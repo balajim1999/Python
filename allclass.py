@@ -456,5 +456,340 @@ monthly_paper_price      = saturday_price_total + sunday_price_total + weekday_p
 print(monthly_paper_price)
 
 ###DAY - 8###
+#Count of days
 
+import datetime
 
+today = datetime.date.today()
+day = datetime.date(today.year, today.month, 1)
+single_day = datetime.timedelta(days=1)
+
+sundays = 0
+while day.month == today.month:
+    if day.weekday() == 4:
+        sundays += 1
+    day += single_day
+print('Fridays :', sundays)
+
+#PRINT VOWELS FROM GIVEN STRING
+
+name = input("Enter name: ") # balaji
+i = 0
+while i<len(name):
+    if name[i] in ['a', 'e', 'i', 'o', 'u']:
+        print(name[i])
+    i+=1 
+
+#PRINT VOWEL AFTER CONVERSION OF UPPER TO LOWER
+
+name = input("Enter name: ") # balaji
+i = 0
+while i<len(name):
+    if name[i].lower() in ['a', 'e', 'i', 'o', 'u']:
+        print(name[i])
+    i+=1 
+
+#PRINT COUNT OF VOWELS
+
+name = input("Enter name: ") # balaji
+i = 0
+count = 0
+while i<len(name):
+    if name[i].lower() in ['a', 'e', 'i', 'o', 'u']:
+        print(name[i])
+        count+=1
+    i+=1
+
+print("no of vowels= ",count) 
+
+#PRINT CONSTANTS AND COUNT OF CONSTANTS
+
+name = input("Enter name: ") # balajimurugan
+i = 0
+count = 0
+while i<len(name):
+    if name[i].lower() not in ['a', 'e', 'i', 'o', 'u']:
+        print(name[i])
+        count+=1
+    i+=1
+
+print("no of constants = ",count) 
+
+#PRINT NUMBER OF WORDS GIVEN SENTENCE
+
+name = input("Enter name: ") # balaji murugan chetpat thiruvannamalai
+i = 0
+count = 1
+while i<len(name):
+    if name[i] == ' ':
+        count+=1
+    i+=1
+
+print("No. of words ", count) 
+
+#LEARN BREAK
+
+no = 1
+while no<=10:
+    print(no)
+    #if no== 6: 
+      #  break
+    no+=1
+else:
+    print("Vanakkam")
+
+#LEARN CONTINUE
+
+no = 1
+while no<=10:
+    if no== 6: 
+        no+=2
+        continue
+    print(no)
+    no+=1
+else:
+    print("Vanakkam")
+
+#PRINT NUMBERS GIVEN E-MAIL ID
+
+email = 'mbalaji211@gmail.com'
+i = 0 
+while i<len(email):
+    if email[i]>='0' and email[i]<='9':
+        print(email[i], end = ' ')
+    i+=1 
+
+#PRINT GIVEN MAIL ID EXCEPT NUMBERS
+
+email = 'mbalaji211@gmail.com'
+i = 0 
+while i<len(email):
+    if not (email[i]>='0' and email[i]<='9'):
+        print(email[i], end = ' ')
+    i+=1 
+
+#PRINT GIVEN MAIL ID EXCEPT LETTERS
+
+email = 'mbalaji211@gmail.com'
+i = 0 
+while i<len(email):
+    if not (email[i]>='a' and email[i]<='z'):
+        print(email[i], end = ' ')
+    i+=1 
+
+#Print day correct date
+
+import datetime 
+date=str(input('Enter the date(for example:09 02 2019):'))
+day_name= ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
+day = datetime.datetime.strptime(date, '%d %m %Y').weekday()
+print(day_name[day]) 
+
+#Mobile warrenty
+
+from datetime import date
+ 
+def numOfDays(date1, date2):
+    return (date2-date1).days
+     
+
+date1 = date(2020, 2, 25)
+date2 = date(2022, 7, 28)
+validity = numOfDays(date1, date2)
+if validity > 800:
+    print("Your mobile warranty is expires")
+elif validity < 800:
+    print("Your mobile warranty is till active")
+
+###Day - 9###
+
+#DIVISORS OF GIVEN NUMBER
+
+no = 100
+# Divisors of no. 100   --> 2, 4, 5, 10, 20, 25, 50,
+div = 2
+while div<no: 
+    if no%div==0:
+        print(div)
+    div+=1 
+
+#COUNT OF DIVISORS OF GIVEN NUMBER
+
+no = int(input("Enter no. "))
+div = 2
+count = 0
+while div<no: 
+    if no%div==0:
+        print(div)
+        count+=1
+    div+=1
+else: 
+    print("Count of Divisors ", count)
+
+#PRIME NUMBER
+  
+no = int(input("Enter no. "))
+div = 2
+count = 0
+while div<no: 
+    if no%div==0:
+        print(div)
+        count+=1
+    div+=1
+else: 
+    if count==0:
+        print("Prime Number")
+    else: 
+        print("Not Prime Number")
+
+#COMMON DIVISORS OF TWO NUMBERS
+  
+no1 = int(input("Enter no. "))
+no2 = int(input("Enter no. "))
+div = 2
+small = no1 if no1<no2 else no2
+
+while div<small: 
+    if no1%div ==0 and no2%div ==0:
+        print(div)
+    div+=1 
+
+#GREATEST COMMON DIVISIORS OF TWO NUMBERS
+  
+no1 = int(input("Enter no. ")) #50
+no2 = int(input("Enter no. "))  #80
+div = 2
+small = no1 if no1<no2 else no2
+gcd = 0
+while div<small: 
+    if no1%div ==0 and no2%div ==0:
+        gcd = div #2 5 10
+    div+=1
+
+print("GCD ", gcd) 
+
+#GREATEST COMMON DIVISORS OF TWO NUMBERS
+  
+no1 = int(input("Enter no. ")) #17
+no2 = int(input("Enter no. "))  #23
+div = 2
+small = no1 if no1<no2 else no2
+gcd = 0
+while div<small: 
+    if no1%div ==0 and no2%div ==0:
+        gcd = div #2 5 10
+    div+=1
+
+if gcd==0:
+    print("No common Divisor")
+else: 
+    print("GCD ", gcd) 
+
+#LEAST COMMON MULTIPLE
+
+no1, no2 = 3, 9
+big = no1 if no1> no2 else no2
+if big%no1 ==0 and big%no2 ==0: 
+    print("least common multiple ="big) 
+
+#LCM
+
+no1 = int(input("Enter no1 = "))
+no2 = int(input("Enter no2 = "))
+big = no1 if no1> no2 else no2
+while True: 
+    if big%no1 ==0 and big%no2 ==0: 
+        print("Least Common Multiple", big)
+        break
+    big+=1
+
+#PRINTING NUMBER IN REVERSE ORDER
+
+no = int(input("Enter the no = "))
+while no>0:
+    print(no%10) #4
+    no = no//10 #no = 123
+
+#COUNT NUMBER OF DIGITS
+
+no = int(input("Enter the no = "))
+count = 0 
+while no>0:
+    no = no//10 #no = 123
+    count+=1
+
+print(count) 
+
+no = 1234
+count = 0 
+while no>0:
+    print(no)
+    no = no//10 #no = 123
+    count+=1
+
+print(count)
+
+#COUNT OF DIGITS
+
+no = int(input("Enter the no = "))
+count = 0 
+count_digits = 0
+while no>0:
+    count_digits = count_digits + (no%10)
+    no = no//10 #no = 123
+    count+=1
+
+print(count) 
+print(count_digits)
+
+###Day - 10###
+
+#REVERSING A GIVEN NUMBER
+
+no = int(input("Enter no. ")) #1234
+reverse = 0 
+while no>0:
+    reverse = (reverse*10) + (no%10) #43
+    no = no//10 #12
+
+print(reverse) 
+
+#PALINDROM
+
+no = int(input("Enter no. ")) #12321
+reverse = 0 
+no2 = no
+while no>0:
+    reverse = (reverse*10) + (no%10) #43
+    no = no//10 #12
+
+if no2 == reverse:
+    print("Palindrome")
+else:
+    print("Not Palindrome") 
+
+#FIBONACCI SERIES
+
+first = -1 
+second = 1
+count = 1
+while count<=10:
+    third = (first+second)
+    print(third)
+    first = second
+    second = third
+    count+=1 
+
+#FIBONACCI SERIES MEMORY MANAGEMENT
+
+first = -1 
+second = 1
+count = 1
+while count<=10:
+    print(first+second) 
+    second = first+second
+    first = second-first
+     
+    count+=1 
+
+###Day - 11###
