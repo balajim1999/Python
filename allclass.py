@@ -793,3 +793,282 @@ while count<=10:
     count+=1 
 
 ###Day - 11###
+
+###PRINT GIVEN NUMBER BINARY NUMBER
+
+no = int(input("Enter no "))	#	6
+binary = ''
+while no>0: 
+	binary = str(no%2) + binary
+	no = no//2	#	no = 2
+
+print(binary)
+------------------- 
+
+
+no do while in python
+no switch case in python  
+
+       
+----------------
+
+name = 'rambabu'
+
+for letter in name: 
+	print(letter) 
+
+-------------
+
+for no in range(10): 
+	print(no) 
+-------
+for no in range(5,10): 
+	print(no)
+---------
+for no in range(5,20,3): 
+	print(no) 
+--------
+
+for no in range(20,5,-5): 
+	print(no) 
+
+
+https://www.youtube.com/watch?v=Sp2af-DQunI 
+
+
+------------TASK - 1-----------------
+###ARMSTRON NUMBER
+
+while True:
+    check = input("Do you want to Armstron number = ")
+    if check == 'yes':
+
+        no = int(input("Enter the number = "))
+        no2=no
+        length = len(str(no))
+        total=0
+
+        while no !=0:
+            rem = no %10
+            total = total + (rem**length)
+            no = no//10
+        if total == no2:
+            print("given number is armstrong number")
+        else:
+            print('given number is not armstrong number')
+    elif check == 'no':
+        break
+--------------------------------------
+#NEON NUMBER
+while True:
+    check = input("Do you want to check neon number = ")
+    if check == 'yes':
+
+
+        no = int (input("Enter the number = "))
+        out = no ** 2
+        total = 0
+        while out != 0:
+            rem = out%10#1
+            out= out//10
+            total= total + rem
+        if no == total:
+            print('given number is neon number')
+        else:
+            print('given number is not neon number')
+    elif check == 'no':
+        break
+
+------------------------------------------
+###CHECK GIVEN NUMBER IS PERFECT NUMBER
+while True:
+    check = input("Do you want to check PERFECT number = ")
+    if check == 'yes':
+
+        no = int(input("Enter the no = "))
+        # Divisors of no. 100   --> 2, 4, 5, 10, 20, 25, 50,
+        div = 1
+        total = 0
+        while div<no: 
+            if no%div==0:
+                total+=div
+            div+=1 
+        if total == no:
+            print('given number is perfect number')
+        else:
+            print('given number is not a perfect number')
+    elif check == 'no':
+        break
+
+------------------------------------
+###FACTORIAL
+
+no = int(input("Enter the no = "))
+i=1
+factorial=1
+while i<=no:
+    
+    factorial*=i
+    i+=1
+print(factorial)
+
+---------------------------------
+###CHECK GIVEN NUMBER IS STRONG NUMBER
+while True:
+    check = input("Do you want to check STRONG number = ")
+    if check == 'yes':
+
+        import math
+        no = int(input("enter the no = "))
+        total=0
+        no2=no
+
+        while no2 !=0:
+            rem=no2%10
+            fact=math.factorial(rem)
+            total+=fact
+            no2=no2//10
+          
+        if total == no:
+            print("given number is strong number")
+           
+        else:
+            print("given number is not a strong number")
+    elif check == 'no':
+        break
+
+------------
+###PRINT BINARY TO DECIMAL
+no=int(input("enter the binary no = "))#0101
+decimal = 0
+i=0
+while no != 0:
+    rem=no%10
+    decimal=decimal + rem*2**i
+    i+=1
+    no=no//10
+print(decimal)
+
+###Day -12###
+
+sent = 'python is easy'
+count = 0
+for letter in sent: 
+    if letter == ' ':
+        count+=1 
+    print(letter, end = ' ')
+else: 
+    print("No. of spaces ", count)
+-----------------
+sent = 'python is easy'
+for i in range(len(sent)-1, -1, -1):
+    print(sent[i], end =' ') 
+
+-------------------------------------
+#print digits alphabets special characters
+data = 'abcd1234!@#$%'
+alphabets = digits = special = 0
+
+for i in range(len(data)):
+    if data[i].isalpha():
+        alphabets+=1
+    elif data[i].isdigit():
+        digits+=1
+    else:
+        special+=1
+else:
+    print("No. of alphabets", alphabets)
+    print("No. of digits",digits)
+    print("No. of special",special) 
+
+-----------------------
+#pattern program
+
+for row in range(6, 1, -1):
+    for col in range(1,row): 
+        print(col, end = ' ')
+    print() 
+-----------------
+
+for row in range(0,5):
+    for col in range(5, row, -1):
+        print(col, end = ' ')
+    print()
+------------------------
+
+for row in range(0,5):
+    for col in range(5, row, -1):
+        print(col*"*", end = ' ')
+    print() 
+-----------
+for row in range(0,5):
+    for col in range(5, row, -1):
+        print(row, end = ' ')
+    print() 
+-----------
+for row in range(2,7):
+    for col in range(1,row):
+        print(col, end = ' ')
+    print() 
+
+-----------------------
+for row in range(4, -1, -1):
+    for col in range(5, row,-1):
+        print(col, end = ' ')
+    print() 
+--------------------
+val = 1
+for row in range(4, -1, -1):
+    for col in range(5, row,-1):
+        print(val, end = ' ')
+        val+=1
+    print() 
+
+--------------
+
+row =5
+while row>=1:
+    col = 1
+    while col<=row:
+        print(col, end = ' ')
+        col+=1
+    print()
+    row-=1 
+
+------------
+#Pattern program
+
+for row in range(2,7,-1):
+    for col in range(1,row):
+        print(col, end= ' ')
+    print()
+-----------------
+
+for row in range(6,2,-1):
+    for col in range(1,row):
+        print(col, end= ' ')
+    print("*")
+-----------------
+for row in range(6,1,-1):
+    for col in range(1,row):
+        print(col, end= ' ')
+    for star in range(5):   
+        print("*", end = ' ')
+    print() 
+------------------
+
+for row in range(6,1,-1):
+    for col in range(1,row):
+        print(col, end= ' ')
+    for star in range(6-row):   
+        print("*", end = ' ')
+    print() 
+
+-----------------------
+
+for row in range(6,1,-1):
+    for col in range(1,row):
+        print(col, end= ' ')
+    for star in range(7-row):   
+        print("*", end = ' ')
+    print() 
