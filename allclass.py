@@ -803,13 +803,7 @@ while no>0:
 	no = no//2	#	no = 2
 
 print(binary)
-------------------- 
 
-
-no do while in python
-no switch case in python  
-
-       
 ----------------
 
 name = 'rambabu'
@@ -831,10 +825,6 @@ for no in range(5,20,3):
 
 for no in range(20,5,-5): 
 	print(no) 
-
-
-https://www.youtube.com/watch?v=Sp2af-DQunI 
-
 
 ------------TASK - 1-----------------
 ###ARMSTRON NUMBER
