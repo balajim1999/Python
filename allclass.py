@@ -1062,3 +1062,158 @@ for row in range(6,1,-1):
     for star in range(7-row):   
         print("*", end = ' ')
     print() 
+
+###Day-13###
+
+for row in range(6,1,-1):
+    for col in range(1, row-1):
+        print(col, end = ' ')
+
+    print("* ", end = ' ')
+    print() 
+
+-----------------------------
+for row in range(6,1,-1):
+    for col in range(1, row-1):
+        print(col, end = ' ')
+    for star in range(5):
+        print("* ", end = ' ')
+    print() 
+---------------------------
+for row in range(6,1,-1):
+    for col in range(1, row-1):
+        print(col, end = ' ')
+    for star in range(row):
+        print("* ", end = ' ')
+    print() 
+-----------------------------
+for row in range(6,1,-1):
+    for col in range(1, row-1):
+        print(col, end = ' ')
+    for star in range(7-row):
+        print("* ", end = ' ')
+    print() 
+-----------------------
+for row in range(6,1,-1):
+    for col in range(1, row-1):
+        print(" ", end = ' ')
+    for star in range(7-row):
+        print("* ", end = ' ')
+    print() 
+----------------------------
+for row in range(6,1,-1):
+    for col in range(1, row-1):
+        print("  ", end = ' ')
+    for star in range(7-row): #7-6  7-5 7-4
+        print("* ", end = ' ')
+    print() 
+------------------------------
+for row in range(6,1,-1):
+    for col in range(1, row-1):
+        print(" ", end = ' ')
+    for star in range(7-row): #7-6  7-5 7-4
+        print(" * ", end = ' ')
+    print() 
+-----------------------------
+for row in range(2,7):
+    for col in range(1,row-1):
+        print(col, end = ' ')
+    print() 
+------------------
+for row in range(2,7):
+    for col in range(1,row-1):
+        print(col, end = ' ')
+    print("*", end = ' ')
+    print() 
+--------------------
+for row in range(2,7):
+    for col in range(1,row-1):
+        print(col, end = ' ')
+    for star in range(row):
+        print("*", end = ' ')
+    print() 
+----------------------
+for row in range(2,7):
+    for col in range(1,row-1):
+        print(col, end = ' ')
+    for star in range(7-row):
+        print("*", end = ' ')
+    print() 
+---------------------
+for row in range(2,7):
+    for col in range(1,row-1):
+        print(" ", end = ' ')
+    for star in range(7-row):
+        print("*", end = ' ')
+    print() 
+----------------------------
+#String Functions
+s = 'python is easy'
+print(s.find('y'))
+print(s.find('s'))
+print(s.find('easy'))
+
+------------------
+#String Functions
+s = 'python is easy'
+print(s.index('y'))
+print(s.index('s'))
+print(s.index('easy')) 
+------------------
+difference between find and index
+-------------
+#String Functions
+s = 'python is easy'
+print(s.rfind('y'))
+print(s.rfind('z'))
+print(s.rfind('easy'))
+--------------------
+#String Functions
+s = 'python is easy'
+print(s.count('y'))
+#function overloading
+print(s.count('y',0,5))
+--------------------
+s = 'Sunday Monday Tuesday Sunday'
+#Function Overloading
+print(s.count('Sunday')) 
+----------------------
+sen = "Rajaraja Pandian is a big King.  Rajaraja Pandian belongs to Thanjavur"
+print(sen.replace("Pandian", "Chozha"))
+-----------------
+sen = "Rajaraja Chozhan"
+print(sen.split()) 
+
+--------------------------
+
+#String Functions
+name = 'balaji'
+print(name.upper())
+name = 'BALAJI'
+print(name.lower())
+name = 'Balaji'
+print(name.swapcase())
+name = 'balaji'
+print(name.title())
+
+name = 'balaji murugan'
+print(name.title())
+
+name = 'balaji murugan'
+print(name.capitalize()) 
+
+-----------------
+#String Functions
+str = "BalajiMuruganBalaji"
+  
+# startswith()
+print(str.startswith("Balaji"))
+print(str.startswith("Balaji", 4, 10))
+print(str.startswith("arun", 8, 14))
+  
+print("\n")
+  
+# endswith
+print(str.endswith("Balaji"))
+print(str.endswith("Balaji", 2, 8))
+print(str.endswith("Murugan", 5, 15))
