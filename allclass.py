@@ -1217,3 +1217,137 @@ print("\n")
 print(str.endswith("Balaji"))
 print(str.endswith("Balaji", 2, 8))
 print(str.endswith("Murugan", 5, 15))
+
+###Day - 14###
+
+#List:
+
+# Group of individual objects into a single entity: 
+
+details = ['balaji', 'thiruvannamalai', 'BE', 2022, 78]
+
+for detail in details:
+    print(detail, end = ' ')
+
+-----------------------------------
+
+details1 = ['balaji', 'thiruvannamalai', 'BE', 2022, 78]
+details2 = ['rambabu', 'madurai', 'BE', 2020, 81]
+
+details = [details1, details2]
+print(len(details))
+
+for info in details:
+    print(info, end = ' ') 
+
+------------------------------------------
+
+details1 = ['balaji', 'thiruvannamalai', 'BE', 2022, 78]
+details2 = ['rambabu', 'madurai', 'BE', 2020, 81]
+
+details = [details1, details2]
+print(len(details))
+
+for info in details:
+    for detail in info:
+        print(detail, end=' ')
+    print() 
+---------------------------------------
+
+# Insertion Order is maintained
+# Duplicate objects are allowed 
+
+---------------------------
+
+l = []
+l.append(10)
+l.append(20)
+l.append(5)
+l.append(40)
+print(l) 
+
+-----------------
+l = []
+l.append(10)
+l.append(20)
+l.append(5)
+l.append(40)
+print(l)
+
+l.insert(0, 123)
+print(l) 
+--------------
+
+l = []
+l.append(10)
+l.append(20)
+l.append(5)
+l.append(40)
+print(l)
+
+l2 = ['a', 'b', 'c']
+
+l.extend(l2)
+print(l)
+print(len(l))
+---------------------
+
+list1 = ["cricket", "football", "volleyball"]
+list2 = ["carrom", "chess", "cards", "cricket"]
+for item in list1:
+    if item in list2:
+        list1.remove(item)
+
+print(list1)
+print(list2) 
+
+--------------------------
+list1 = ["cricket", "football", "volleyball"]
+list2 = ["carrom", "chess", "cards", "cricket"]
+list1.reverse()
+print(list1)
+
+list1.sort()
+print(list1)
+
+list1.sort(reverse=True)
+print(list1) 
+
+list1.sort(reverse=False)
+print(list1) 
+
+------------------------
+list1 = ["cricket", "football", "volleyball"]
+list2 = ["carrom", "chess", "cards", "cricket"]
+list3 = list1
+
+print(list1)
+print(list3)
+-----------------------
+#List Aliasing
+list1 = ["cricket", "football", "volleyball"]
+list2 = ["carrom", "chess", "cards", "cricket"]
+#deep copy
+list3 = list1
+
+print(list1)
+print(list3)
+
+list3[0] = 'basketball'
+print(list1)
+print(list3) 
+
+--------------------------
+
+#List Aliasing
+list1 = ["cricket", "football", "volleyball"]
+list2 = ["carrom", "chess", "cards", "cricket"]
+#shallow copy
+list3 = list1.copy()
+
+print(list1)
+print(list3)
+
+list3[0] = 'basketball'
+print(list1)
+print(list3)
