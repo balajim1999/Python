@@ -1351,3 +1351,184 @@ print(list3)
 list3[0] = 'basketball'
 print(list1)
 print(list3)
+
+###Day -15###
+
+alpha = ['a','b','c']
+num = [11,22,33]
+both = [alpha, num]
+print(both)
+#print(len(both))
+
+for inner_list in both:
+    for item in inner_list:
+        print(item, end = ' ')
+    print() 
+
+---------------------
+
+alpha = ['a',22,'c']
+num = [11,'b',33]
+both = [alpha, num]
+print(both)
+print(len(both))
+for inner_list in both:
+    for item in inner_list:
+      
+        if type(item)==int:
+            print(item, end = ' ')
+    print() 
+
+---------------------
+
+alpha = ['a',22,'c']
+num = [11,'b',33]
+both = [alpha, num]
+print(both)
+print(len(both))
+for inner_list in both:
+    for item in enumerate(inner_list):
+        
+        print(item, end = ' ')
+    print() 
+
+-----------------------------------------------
+
+alpha = ['a',22,'c']
+num = [11,'b',33]
+both = [alpha, num]
+innerlist = 0
+while innerlist<len(both):
+    item = 0
+    while item<len(both[innerlist]):
+        if both[innerlist][item] ==33:
+            both[innerlist][item] = 333
+        item+=1
+    innerlist+=1
+
+print(both) 
+
+------------------------
+
+alpha = ['a',22,'c']
+num = [11,'b',33]
+both = [alpha, num]
+for i in range(len(both)):
+    for j in range(len(both[i])):
+        print(both[i][j], end = ' ')
+
+print(both) 
+
+-----------------------------------
+
+word = 'a1b2c3'
+#output = abc123
+alpha = ''
+num = ''
+for letter in word:
+    if letter.isalpha():
+        alpha = alpha + letter
+    else:
+        num  = num + letter
+
+print(alpha+num)
+
+----------------------------
+input1 = 'blj'
+input2 = 'aai'
+output = ''
+i=0
+while i<len(input1):
+
+    output = output + input1[i]
+    output = output + input2[i]
+    i+=1
+
+print(output) 
+
+
+---------------------------------
+
+input1 = 'bljmr'
+input2 = 'aai'
+output = ''
+
+i=0
+small = len(input1) if len(input1)< len(input2) else len(input2)
+while i<small:
+    output = output + input1[i]
+    output = output + input2[i]
+    i+=1
+else:
+    output = output+ input1[-1]
+
+print(output)  
+
+###Day - 16###
+word = 'aaabbccdeee'
+#output = 'abcde'
+l = []
+for letter in word:
+    if letter not in l:
+        l.append(letter)
+else:
+    print(l)
+
+----------------------
+no = 97 &65
+print(chr(no)) 
+
+48-57(0-9)
+
+--------------
+no = 'A'
+print(ord(no)) 
+
+------------------------
+
+s = 'a5b6c7'
+#output = 'ae'
+
+for letter in s:
+    if letter.isalpha():
+        print(letter, end= '')
+    else:
+        print(chr(int(letter)+96), end='')
+
+---------------------
+
+#List Comparison
+
+a = ['balaji', 'lakshmi', 'rambabu']
+b = ['lakshmi', 'balaji', 'rambabu']
+c = ['lakshmi', 'balaji', 'rambabu']
+
+print(a==b)
+print(b==c)
+print(a>b)
+print(b>a)
+print(b!=c) 
+
+
+-----------------
+
+l =[[10,20,30],
+    [40,50,60],
+    [70,80,90]]
+
+for list in range(len(l)):
+    for ll in range(len(l[list])):
+        print(l[list][ll]) 
+
+---------------------
+
+l =[[10,20,30],
+    [40,50,60],
+    [70,80,90]]
+
+for list in range(len(l)):
+    for ll in range(len(l[list])):
+        if ll == list:
+            print(l[list][ll]) 
+
+
